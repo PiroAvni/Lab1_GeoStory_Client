@@ -11,6 +11,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./static/css/style.css">
+    <script defer src="quizImages.js"></script>
     <title>geoStory | Quiz</title>
 </head>
 
@@ -32,6 +33,32 @@
             </div>
         </div>
     </nav>
+
+
+    <div id="container">
+        <div class="btn-containter">
+            <button type="button" class="btn btn-info" onclick="openHint()">Hint</button>
+        </div>
+
+        <div class="popup" id="hintPopup">
+            <h3>Here's a hint:</h3>
+            <p></p>
+            <br>
+            <button type="submit" class="btn btn-light" onclick="closeHint()">close</button>
+        </div>
+
+        <div class="fact-containter">
+            <button type="button" class="btn btn-info" onclick="openFact()">Fun Fact</button>
+        </div>
+
+        <div class="popup" id="factPopup">
+            <h3>Here's a fun fact:</h3>
+            <p></p>
+            <br>
+            <button type="submit" class="btn btn-light" onclick="closeFact()">close</button>
+        </div>
+
+    </div>
 
 </body>
 
