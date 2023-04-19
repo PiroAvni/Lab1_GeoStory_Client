@@ -16,3 +16,10 @@
     cursor: pointer;
 }
 
+#continent_img {
+    position: absolute;
+    top: 60px;
+    width: 99%;
+    height: 92%;
+    border-radius: 15px;
+}

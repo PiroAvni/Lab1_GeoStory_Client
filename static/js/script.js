@@ -6,7 +6,7 @@ function clicked(continent) {
 }
 
 function randImg(continent) {
-    fetch(`http://localhost:3000/${continent}/random`)
+    fetch(`https://geostory-server.onrender.com/${continent}/random`)
         .then(response => response.json())
         .then(grabImg)
         .catch(error => {
@@ -14,11 +14,14 @@ function randImg(continent) {
         });
 }
 
+
 function grabImg(data) {
     const randIdx = Math.floor(Math.random() * data.img.length);
     const imgRand = data.img[randIdx];
     console.log(imgRand);
     const img = document.createElement("img");
     img.src = imgRand["num"];
+    img.id = "continent_img";
     container.appendChild(img);
+
 }
