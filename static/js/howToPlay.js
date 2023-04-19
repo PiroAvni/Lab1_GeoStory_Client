@@ -1,9 +1,24 @@
-window.onload = function () {
-    const myModal = new bootstrap.Modal(document.getElementById('howToPlay'));
-    myModal.show();
+const playModal = new bootstrap.Modal(document.getElementById('howToPlay'));
+const hintModal = new bootstrap.Modal(document.getElementById('exampleHint'));
+const closePlay = document.getElementById('playCloseBtn');
+const closeHint = document.getElementById('hintCloseBtn');
 
-    const close = document.getElementById('closeBtn');
-    close.addEventListener('click', function () {
-        myModal.hide();
+window.onload = function () {
+    showHowToPlay(playModal);
+
+    closePlay.addEventListener('click', function () {
+        playModal.hide();
+    })
+}
+
+function showHowToPlay() {
+    playModal.show();
+}
+
+function showHint() {
+    hintModal.show();
+
+    closeHint.addEventListener('click', function () {
+        hintModal.hide();
     })
 }
