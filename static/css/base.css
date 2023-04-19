@@ -8,8 +8,8 @@ html {
 }
 
 body {
-    background-image: url("./images/background.jpg");
     padding: 1rem;
+    background-color: #C7F9CC;
 }
 
 section {
