@@ -3,16 +3,13 @@ const hintModal = new bootstrap.Modal(document.getElementById('exampleHint'));
 const closePlay = document.getElementById('playCloseBtn');
 const closeHint = document.getElementById('hintCloseBtn');
 
-window.onload = function () {
-    showHowToPlay();
+
+function showHowToPlay() {
+    playModal.show();
 
     closePlay.addEventListener('click', function () {
         playModal.hide();
     })
-}
-
-function showHowToPlay() {
-    playModal.show();
 }
 
 function showHint() {
@@ -22,3 +19,5 @@ function showHint() {
         hintModal.hide();
     })
 }
+
+

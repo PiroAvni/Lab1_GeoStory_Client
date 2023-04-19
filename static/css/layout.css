@@ -13,6 +13,7 @@
 
 .hint_icon {
     position: absolute;
+    z-index: 1;
     top: 80px;
     right: 150px;
     font-size: 45px;
