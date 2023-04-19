@@ -11,6 +11,7 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script defer src="../js/script.js"></script>
+    <script defer src="../js/howToPlay.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <title>geoStory</title>
 </head>
@@ -34,6 +35,25 @@
     </nav>
     <div class="container">
         <h2>Pick a Continent!</h2>
+
+        <div class="how_to_play">
+            <div class="modal fade" id="howToPlay" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">How to play geoStory!</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>instructions</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="closeBtn"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="map">
             <img src="/static/images/world_continents_map.jpg" usemap="#world-map">
             <map name="world-map">

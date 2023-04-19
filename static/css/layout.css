@@ -5,11 +5,23 @@
     margin-top: 100px;
 }
 
+.hint-containter {
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
 
 .container h2 {
     position: absolute;
     top: 80px;
     left: 50px;
+}
+
+#map img {
+    z-index: 0;
 }
 
 #map .continent {
