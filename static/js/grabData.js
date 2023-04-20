@@ -83,7 +83,6 @@ function randomCountry(input) {
 function answerL() {
     if (document.getElementById("btnLeft").innerHTML === correctAnswer) {
         answerModal.show()
-        factBtn.removeAttribute('disabled');
     } else {
         wrongAnswer.show()
     }
@@ -92,7 +91,6 @@ function answerL() {
 function answerM() {
     if (document.getElementById("btnMiddle").innerHTML === correctAnswer) {
         answerModal.show()
-        factBtn.removeAttribute('disabled');
     } else {
         wrongAnswer.show()
     }
@@ -101,7 +99,6 @@ function answerM() {
 function answerR() {
     if (document.getElementById("btnRight").innerHTML === correctAnswer) {
         answerModal.show()
-        factBtn.removeAttribute('disabled');
     } else {
         wrongAnswer.show()
     }

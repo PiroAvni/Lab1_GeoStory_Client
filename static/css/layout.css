@@ -18,6 +18,11 @@ section {
     z-index: 99 !important;
 }
 
+
+h2 {
+    transform: translate(200%, -10%);
+}
+
 h3 {
     padding: 20px;
 }
@@ -67,10 +72,20 @@ h3 {
     color: #333;
 }
 
+.choice-containter {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
 .fact-containter {
     position: absolute;
     top: 90%;
-    left: 70%;
+    left: 81%;
     text-align: center;
     padding: 0 30px 30px;
     color: #333;
@@ -81,14 +96,16 @@ h3 {
     top: 80px;
     left: 50px;
 }
+
 .hint_icon {
     position: absolute;
     z-index: 1;
     top: 80px;
-    right: 150px;
+    right: 50px;
     font-size: 45px;
     cursor: pointer;
 }
+
 #map img {
     z-index: 0;
 }
@@ -99,9 +116,9 @@ h3 {
 
 #continent_img {
     position: absolute;
-    top: 60px;
-    width: 99%;
-    height: 92%;
+    top: 80px;
+    width: 80%;
+    height: 80%;
     border-radius: 15px;
 }
 
@@ -112,13 +129,3 @@ h3 {
 #continent_hint {
     padding: 15px;
 }
-
-.choice-containter {
-    position: absolute;
-    top: 90%;
-    left: 40%;
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-}
-

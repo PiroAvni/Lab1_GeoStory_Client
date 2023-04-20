@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">geoStory</a>
+            <img src="../images/GeoStory.png" alt="logo" style="width: 10%; padding-right: 10px;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,13 +29,12 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="./index.html">Home</a>
                     <a class="nav-link active" aria-current="page" href="#">Play</a>
-                    <a class="nav-link" href="#">About Us</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="container">
-        <h2>Pick a Continent!</h2>  
+        <h2>Pick a Continent!</h2>
         <div class="hint_icon" onclick="showHowToPlay()">
             <i class="fa-solid fa-circle-info"></i>
         </div>
@@ -66,7 +65,7 @@
                                     look like this:
                                 </em></p>
                             <div class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-lg btn-primary mr-3">Skip</button>
+                                <button type="button" class="btn btn-light btn-lg btn-outline-dark mr-3">Skip</button>
                             </div>
                             <p class="mt-4"><em>Click the icon located in the top right area to read me again. It
                                     looks like this:</em></p>
@@ -101,7 +100,7 @@
                 </div>
             </div>
         </div>
-       <div id="map">
+        <div id="map">
             <img src="../images/world_continents_map.png" usemap="#world-map">
             <map name="world-map">
                 <area class="continent" coords="762,142,891,207" shape="rect" onclick="clicked('asia')">

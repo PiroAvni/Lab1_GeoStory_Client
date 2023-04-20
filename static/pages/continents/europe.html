@@ -12,6 +12,8 @@
         crossorigin="anonymous"></script>
 
     <script defer src="../../js/grabData.js"></script>
+    <script defer src="../../js/howToPlayContinent.js"></script>
+
     <script src="https://kit.fontawesome.com/7df81f54fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <title>You chose: Europe!</title>
@@ -29,12 +31,91 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="../../pages/index.html">Home</a>
                     <a class="nav-link active" aria-current="page" href="../play.html">Play</a>
-                    <a class="nav-link" href="#">About Us</a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container"></div>
+
+    <div class="container" aria-label="image"></div>
+
+    <div class="howToPlay">
+        <div class="hint_icon" onclick="showHowToPlay()">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <div class="how_to_play">
+            <div class="modal fade" id="howToPlay" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">How to play geoStory!</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p>Click on a continent to see a random image from that continent.
+                                Try to guess which
+                                country the image represents. </p>
+                            <p class="mt-4"><em>Note: You can click the "Hint" button for help
+                                    with your guess. If
+                                    your
+                                    guess is <b>correct</b>, you'll see a <b>fun fact</b> about
+                                    the country! <br>
+                                </em>
+                            </p>
+                            <p class="mt-4"><em>The hint button will be located in the bottom
+                                    left area and will
+                                    look
+                                    like this (click for a preview): </em>
+                            </p>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg btn-primary mr-3"
+                                    onclick="showHint()">Hint</button>
+                            </div>
+                            <p class="mt-4"><em>You may also skip to the next image in that
+                                    continent if it is too
+                                    difficult! The skip button will be located in the bottom
+                                    right area and will
+                                    look like this:
+                                </em></p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-lg btn-primary mr-3">Skip</button>
+                            </div>
+                            <p class="mt-4"><em>Click the icon located in the top right area to
+                                    read me again. It
+                                    looks like this:</em></p>
+                            <p style="display: flex; justify-content: center;">
+                                <i class="fa-solid fa-circle-info" style="font-size: 35px;"></i>
+                            </p>
+                            <p class="mt-4">Good luck, and don't forget to have fun :) <br> </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="playCloseBtn"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="example_hint">
+            <div class="modal fade" id="exampleHint" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Example Hint</h5>
+                        </div>
+                        <div class="modal-body">
+                            <p><em>This is where the hint would be!</em></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="hintCloseBtn"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="btnContainer">
         <div class="hint-containter">
@@ -71,6 +152,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Correct!</h5>
+                        <button type="button" id="factBtn" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#factModal">
+                            Fun Fact
+                        </button>
                         <button type="button" class="btn btn-light" onclick="window.location.reload(true)">Next</button>
                     </div>
                 </div>
@@ -89,12 +174,9 @@
         </div>
 
         <div class="fact-containter">
-            <button type="button" id="factBtn" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#factModal" disabled>
-                Fun Fact
-            </button>
 
-            <button type="button" class="btn btn-light" onclick="window.location.reload(true)">Skip</button>
+            <button type="button" class="btn btn-light btn-outline-dark"
+                onclick="window.location.reload(true)">Skip</button>
         </div>
 
         <div class="modal fade" id="factModal" tabindex="-1" aria-labelledby="factModalLabel" aria-hidden="true">
@@ -106,77 +188,13 @@
                     </div>
                     <div class="factBody"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    <div class="container">
-        <div class="howToPlay">
-            <div class="hint_icon" onclick="showHowToPlay()">
-                <i class="fa-solid fa-circle-info"></i>
-            </div>
-            <div class="how_to_play">
-                <div class="modal fade" id="howToPlay" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">How to play geoStory!</h5>
-                            </div>
-                            <div class="modal-body">
-                                <p>Click on a continent to see a random image from that continent. Try to guess which
-                                    country the image represents. </p>
-                                <p class="mt-4"><em>Note: You can click the "Hint" button for help with your guess. If
-                                        your
-                                        guess is <b>correct</b>, you'll see a <b>fun fact</b> about the country! <br>
-                                    </em>
-                                </p>
-                                <p class="mt-4"><em>The hint button will be located in the bottom left area and will
-                                        look
-                                        like this (click for a preview): </em>
-                                </p>
-
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-lg btn-primary mr-3"
-                                        onclick="showHint()">Hint</button>
-                                </div>
-                                <p class="mt-4"><em>You may also skip to the next image in that continent if it is too
-                                        difficult! The skip button will be located in the bottom right area and will
-                                        look like this:
-                                    </em></p>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" class="btn btn-lg btn-primary mr-3">Skip</button>
-                                </div>
-                                <p class="mt-4"><em>Click the icon located in the top right area to read me again. It
-                                        looks like this:</em></p>
-                                <p style="display: flex; justify-content: center;">
-                                    <i class="fa-solid fa-circle-info" style="font-size: 35px;"></i>
-                                </p>
-                                <p class="mt-4">Good luck, and don't forget to have fun :) <br> </p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" id="playCloseBtn"
-                                    data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="example_hint">
-                <div class="modal fade" id="exampleHint" tabindex="-1" role="dialog">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Example Hint</h5>
-                            </div>
-                            <div class="modal-body">
-                                <p><em>This is where the hint would be!</em></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" id="hintCloseBtn"
-                                    data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            onclick="window.location.reload(true)">Next</button>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </body>
 
