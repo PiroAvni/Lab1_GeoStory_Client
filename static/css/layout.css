@@ -28,12 +28,12 @@ h3 {
 }
 
 .top40 {
-    top: 40% !important;
+    top: 50% !important;
     margin-top: 20px;
 }
 
 .top60 {
-    top: 60% !important;
+    top: 70% !important;
     margin-top: 50px;
 }
 
@@ -134,4 +134,9 @@ h3 {
 
 #continent_hint {
     padding: 15px;
+}
+
+div p {
+    overflow: hidden;
+    overflow-x: scroll;
 }
