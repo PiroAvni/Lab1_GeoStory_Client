@@ -18,9 +18,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">geoStory</a>
+            <a class="navbar-brand" href="./index.html">geoStory</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
         </div>
     </nav>
     <div class="container">
-        <h2>Pick a Continent!</h2>
+        <h2>Pick a Continent!</h2>  
         <div class="hint_icon" onclick="showHowToPlay()">
             <i class="fa-solid fa-circle-info"></i>
         </div>
@@ -83,8 +83,8 @@
                 </div>
             </div>
         </div>
-        <div id="map">
-            <img src="/static/images/world_continents_map.jpg" usemap="#world-map">
+       <div id="map">
+            <img src="../images/world_continents_map.png" usemap="#world-map">
             <map name="world-map">
                 <area class="continent" coords="762,142,891,207" shape="rect" onclick="clicked('asia')">
                 <area class="continent" coords="596,130,692,174" shape="rect" onclick="clicked('europe')">
@@ -96,6 +96,21 @@
         </div>
     </div>
 
+
+    <div class="modal fade" id="hintModal" tabindex="-1" aria-labelledby="hintModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="hintModalLabel">Here's a hint:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="hintBody"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

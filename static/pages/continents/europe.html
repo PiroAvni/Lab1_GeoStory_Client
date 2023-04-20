@@ -10,18 +10,17 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script defer src="../../js/continentName.js"></script>
-    <script defer src="../../js/script.js"></script>
-    <script defer src="../../js/howToPlayContinent.js"></script>
+
+    <script defer src="../../js/grabData.js"></script>
     <script src="https://kit.fontawesome.com/7df81f54fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <title>You chose: Europe!</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<body onload="randomCountry()">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">geoStory</a>
+            <a class="navbar-brand" href="../index.html">geoStory</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,6 +34,79 @@
             </div>
         </div>
     </nav>
+    <div class="container"></div>
+
+    <div id="btnContainer">
+        <div class="hint-containter">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hintModal">
+                Hint
+            </button>
+        </div>
+
+        <div class="modal fade" id="hintModal" tabindex="-1" aria-labelledby="hintModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="hintModalLabel">Here's a hint:</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="hintBody"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="choice-containter">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" id="btnLeft" onclick="answerL()"></button>
+                <button type="button" class="btn btn-primary" id="btnMiddle" onclick="answerM()"></button>
+                <button type="button" class="btn btn-primary" id="btnRight" onclick="answerR()"></button>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="correctAnswer">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Correct!</h5>
+                        <button type="button" class="btn btn-light" onclick="window.location.reload(true)">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="wrongAnswer">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Wrong! Try Again</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fact-containter">
+            <button type="button" id="factBtn" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#factModal" disabled>
+                Fun Fact
+            </button>
+
+            <button type="button" class="btn btn-light" onclick="window.location.reload(true)">Skip</button>
+        </div>
+
+        <div class="modal fade" id="factModal" tabindex="-1" aria-labelledby="factModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="factModalLabel">Here's a fun fact:</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="factBody"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
     <div class="container">
         <div class="howToPlay">
             <div class="hint_icon" onclick="showHowToPlay()">

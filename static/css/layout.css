@@ -1,3 +1,43 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 35%;
+    height: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar {
+    z-index: 99 !important;
+}
+
+h3 {
+    padding: 20px;
+}
+
+.top20 {
+    top: 20% !important;
+    padding: 20px;
+}
+
+.top40 {
+    top: 40% !important;
+    margin-top: 20px;
+}
+
+.top60 {
+    top: 60% !important;
+    margin-top: 50px;
+}
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -5,12 +45,42 @@
     margin-top: 100px;
 }
 
+
+.btnContainer {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hint-containter {
+    position: absolute;
+    top: 90%;
+    left: 9%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
+.fact-containter {
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
 .container h2 {
     position: absolute;
     top: 80px;
     left: 50px;
 }
-
 .hint_icon {
     position: absolute;
     z-index: 1;
@@ -19,7 +89,6 @@
     font-size: 45px;
     cursor: pointer;
 }
-
 #map img {
     z-index: 0;
 }
@@ -35,3 +104,21 @@
     height: 92%;
     border-radius: 15px;
 }
+
+#continent_fact {
+    padding: 15px;
+}
+
+#continent_hint {
+    padding: 15px;
+}
+
+.choice-containter {
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+
