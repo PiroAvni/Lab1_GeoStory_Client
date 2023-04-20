@@ -58,6 +58,17 @@ h3 {
     justify-content: center;
 }
 
+#correct-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#factBtn {
+    margin: 5px;
+}
+
 .hint-containter {
     position: absolute;
     top: 90%;
