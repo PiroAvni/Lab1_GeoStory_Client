@@ -1,9 +1,11 @@
 const container = document.querySelector('.container');
 
+
 function clicked(continent) {
     const url = `../pages/continents/${continent}.html`;
     window.location.href = url;
 }
+
 
 function randImg(continent) {
     fetch(`https://geostory-server.onrender.com/${continent}/random`)
