@@ -37,12 +37,14 @@ h3 {
     margin-top: 50px;
 }
 
+
 .container {
     display: flex;
     justify-content: center;
     /* border: 2px solid black; */
     margin-top: 100px;
 }
+
 
 .btnContainer {
     width: 100%;
@@ -79,6 +81,17 @@ h3 {
     top: 80px;
     left: 50px;
 }
+.hint_icon {
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    right: 150px;
+    font-size: 45px;
+    cursor: pointer;
+}
+#map img {
+    z-index: 0;
+}
 
 #map .continent {
     cursor: pointer;
@@ -108,3 +121,4 @@ h3 {
     padding: 0 30px 30px;
     color: #333;
 }
+

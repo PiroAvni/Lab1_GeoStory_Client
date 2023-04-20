@@ -11,9 +11,11 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script defer src="../../js/grabData.js"></script>
+    <script src="https://kit.fontawesome.com/7df81f54fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/style.css">
     <title>You chose: South America!</title>
 </head>
+
 
 <body onload="randomCountry()">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="light">
@@ -25,7 +27,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="../index.html">Home</a>
+
+                    <a class="nav-link" href="../../pages/index.html">Home</a>
                     <a class="nav-link active" aria-current="page" href="../play.html">Play</a>
                     <a class="nav-link" href="#">About Us</a>
                 </div>
@@ -106,6 +109,54 @@
                     <div class="factBody"></div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <div class="container">
+        <div class="howToPlay">
+            <div class="hint_icon" onclick="showHowToPlay()">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="how_to_play">
+                <div class="modal fade" id="howToPlay" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">How to play geoStory!</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>Click on a continent to see a random image from that continent. Try to guess which
+                                    country the image represents. </p>
+                                <p class="mt-4"><em>Note: You can click the "Hint" button for help with your guess. If
+                                        your
+                                        guess is correct, you'll see a fun fact about the country! <br> The hint button
+                                        will
+                                        look like this (click for a preview): </em></p>
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-lg btn-primary mr-3"
+                                        onclick="showHint()">Hint</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" id="playCloseBtn"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="example_hint">
+                <div class="modal fade" id="exampleHint" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Example Hint</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p><em>This is where the hint would be!</em></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" id="hintCloseBtn"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
