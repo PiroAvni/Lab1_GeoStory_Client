@@ -1,3 +1,4 @@
+//hints, fun facts, multiple choice 
 const container = document.querySelector('.container');
 const hintBody = document.querySelector('.hintBody');
 const factBody = document.querySelector('.factBody');
@@ -7,6 +8,11 @@ const middleBtn = document.querySelector('#btnMiddle');
 const rightBtn = document.querySelector('#btnRight');
 const answerModal = new bootstrap.Modal(document.getElementById('correctAnswer'));
 const wrongAnswer = new bootstrap.Modal(document.getElementById('wrongAnswer'));
+//how to play popup
+const playModal = new bootstrap.Modal(document.getElementById('howToPlay'));
+const hintModal = new bootstrap.Modal(document.getElementById('exampleHint'));
+const closePlay = document.getElementById('playCloseBtn');
+const closeHint = document.getElementById('hintCloseBtn');
 
 const randPlaces = {
     europe: ["Germany", "France", "Greece", "Austria", "Belgium", "Croatia", "Sweden", "Norway", "Denmark", "Iceland", "Romania", "Albania", "Malta", "Hungray", "Serbia", "Slovakia", "Lithuania", "Monaco", "Lativa", "Estonia", "Switzerland"],
@@ -122,4 +128,21 @@ function grabFact(data) {
     factInfo.textContent = fact;
     factInfo.id = "continent_fact";
     factBody.appendChild(factInfo);
+}
+
+//how to play popup
+function showHowToPlay() {
+    playModal.show();
+
+    closePlay.addEventListener('click', function () {
+        playModal.hide();
+    })
+}
+
+function showHint() {
+    hintModal.show();
+
+    closeHint.addEventListener('click', function () {
+        hintModal.hide();
+    })
 }
